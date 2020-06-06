@@ -22,3 +22,5 @@ Thumbs.db
 $RECYCLE.BIN/
 *.lnk
 *.stackdump
+Client.vbp
+INIT/Config.ini
