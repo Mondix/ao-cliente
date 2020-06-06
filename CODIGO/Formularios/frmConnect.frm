@@ -601,7 +601,7 @@ Private Function RefreshServerList() As String
 'Last Modification: 01/04/2019
 '01/04/2019: Recox - Descarga y llena el listado de servers
 '***************************************************
-        Call DownloadServersFile("https://github.com/mondix/ao-cliente/master/INIT/sinfo.dat")
+        'Call DownloadServersFile("https://github.com/mondix/ao-cliente/master/INIT/sinfo.dat")
         Call CargarServidores
 End Function
 
