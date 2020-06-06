@@ -601,7 +601,7 @@ Private Function RefreshServerList() As String
 'Last Modification: 01/04/2019
 '01/04/2019: Recox - Descarga y llena el listado de servers
 '***************************************************
-        Call DownloadServersFile("https://raw.githubusercontent.com/ao-libre/ao-cliente/master/INIT/sinfo.dat")
+        Call DownloadServersFile("https://github.com/mondix/ao-cliente/master/INIT/sinfo.dat")
         Call CargarServidores
 End Function
 
@@ -979,7 +979,7 @@ Private Sub DownloadServersFile(myURL As String)
 'Check content of strData to avoid clean the file sinfo.ini if there is no response from Github by Recox
 'If the response from github is error code 500 we don't do anything with the sinfo.dat file Recox
 '**********************************************************
- On Error GoTo Error   
+ On Error GoTo Error
     Dim strData As String
     Dim f As Integer
 
@@ -991,7 +991,7 @@ Private Sub DownloadServersFile(myURL As String)
 
     f = FreeFile
 
-    Dim is500Error As Boolean 
+    Dim is500Error As Boolean
     is500Error = InStr(1, strData, "500: Internal Server Error")
     
     If LenB(strData) <> 0 And Not is500Error Then
